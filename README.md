@@ -12,8 +12,7 @@ REPLACETO="newurl.my"
 When you are sure you have these correct, run the script using 
 "sh wp-cli-db-migrate.sh". 
 
-Note: Perhaps consider adding "--dry-run" parameter to "wp search-replace" command to make sure things 
-work as expected. 
+Use "-f" or "-force" flag to skip the confirmation and just migrate immediately. 
 
 <b>USE AT YOUR OWN RISK AND MAKE A BACKUP OF ALL YOUR DATABASES FIRST</b>
 
