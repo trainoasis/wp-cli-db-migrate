@@ -6,12 +6,12 @@ REPLACEFROM="from.url.my"
 REPLACETO="to.url.my"
 
 FORCE=false
-DRYRUN="--dry-run"
+#DRYRUN="--dry-run"
 
 # CHECK FLAGS FIRST
 if [[ $* == -force ]] || [[ $* == -f ]]
   then
-    DRYRUN=""
+    #DRYRUN=""
     FORCE=true
 fi
 
@@ -43,7 +43,7 @@ wp db export db_backup.sql
 wp db import "${FROM}/wp-cli-db-migrate.sql"
 
 # SEARCH-REPLACE THE NEW DATABASE
-wp search-replace "${REPLACEFROM}" "${REPLACETO}" ${DRYRUN}
+wp search-replace "${REPLACEFROM}" "${REPLACETO}" #${DRYRUN}
 
 # IF ALL IS FINE, CLEAN AFTER OURSELVES
 cd "${FROM}"
